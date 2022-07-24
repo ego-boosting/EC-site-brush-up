@@ -1,13 +1,10 @@
 Rails.application.routes.draw do
 
-  namespace :admin do
-    get 'homes/top'
-  end
 # 顧客用
 # URL /customers/sign_in ...
 devise_for :customers,skip: [:passwords], controllers: {
-  registrations: "public/registrations",
-  sessions: 'public/sessions'
+  registrations: "customer/registrations",
+  sessions: 'customer/sessions'
 }
 
 # 管理者用
@@ -15,5 +12,9 @@ devise_for :customers,skip: [:passwords], controllers: {
 devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
   sessions: "admin/sessions"
 }
+
+  namespace :admin do
+    get 'homes/top'
+  end
 
 end
