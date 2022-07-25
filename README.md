@@ -60,7 +60,7 @@ rails g devise:views admins
 # 顧客用
 # URL /customers/sign_in ...
 devise_for :customers,skip: [:passwords], controllers: {
-  registrations: "public/registrations",
+  registrations: "cutomer/registrations",
   sessions: 'customer/sessions'
 }
 
