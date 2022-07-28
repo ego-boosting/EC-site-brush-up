@@ -60,7 +60,7 @@ rails g devise:views admins
 # 顧客用
 # URL /customers/sign_in ...
 devise_for :customers,skip: [:passwords], controllers: {
-  registrations: "public/registrations",
+  registrations: "cutomer/registrations",
   sessions: 'customer/sessions'
 }
 
@@ -71,6 +71,7 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
 }
 
 yarn install
+
 
 Bootstrap導入
 yarn add jquery bootstrap@4.5 popper.js
@@ -109,5 +110,3 @@ app/javascript/stylesheets/application.scss
 
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 
-
-github
