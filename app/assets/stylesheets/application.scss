@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+ body{
+  background-color: #f5deb3!important;
+}
+
+header{
+  background-color: brown!important;
+}
+
+main{
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 156px;
+  position: relative;
+}
+
+footer{
+  background-color: brown!important;
+  width: 100%;
+  position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+}
