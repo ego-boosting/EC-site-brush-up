@@ -71,3 +71,40 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
 }
 
 yarn install
+
+Bootstrap導入
+yarn add jquery bootstrap@4.5 popper.js
+↓
+config/webpack/environment.js
+
+const webpack = require('webpack')
+environment.plugins.prepend(
+  'Provide',
+  new webpack.ProvidePlugin({
+    $: 'jquery/src/jquery',
+    jQuery: 'jquery/src/jquery',
+    Popper: 'popper.js'
+  })
+)
+↓
+app/javascript/stylesheets/application.scss
+
+@import '~bootstrap/scss/bootstrap';
+↓
+app/javascript/packs/application.js
+import "jquery";
+import "popper.js";
+import "bootstrap";
+import "../stylesheets/application"
+
+Fontawesome 導入
+
+yarn add @fortawesome/fontawesome-free@5.15.4
+↓
+app/javascript/packs/application.js
+
+import '@fortawesome/fontawesome-free/js/all'
+↓
+app/javascript/stylesheets/application.scss
+
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
