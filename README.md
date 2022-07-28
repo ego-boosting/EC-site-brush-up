@@ -108,3 +108,6 @@ import '@fortawesome/fontawesome-free/js/all'
 app/javascript/stylesheets/application.scss
 
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+
+github
