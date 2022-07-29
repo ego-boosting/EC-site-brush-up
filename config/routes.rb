@@ -37,7 +37,13 @@ Rails.application.routes.draw do
     end
   end
 
- # 管理者用
 
-
+  # 管理者用
+  namespace :admin do
+    resources :items, only: [:new,:index,:create,:show,:edit,:update,:destroy]
+    resources :orders, only: [:index,:show,:update]
+    resources :order_details, only:[:update]
+    resources :genres, only: [:index,:create,:edit,:update,:destroy]
+    resources :customers, only:[:index,:show,:edit,:update]
+  end
 end

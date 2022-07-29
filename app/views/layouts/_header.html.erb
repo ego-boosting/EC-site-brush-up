@@ -28,6 +28,10 @@
               <i class="fas fa-sign-out-alt"></i> Log out
             <% end %>
           </li>
+        <% elsif admin_signed_in? %>
+          <li>
+            <%= link_to%>
+          </li>
         <% else %>
           <li>
             <%= link_to about_path, class: 'nav-link text-light' do %>
