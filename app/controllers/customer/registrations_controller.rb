@@ -62,13 +62,14 @@ class Customer::RegistrationsController < Devise::RegistrationsController
   def after_sign_up_path_for(resource)
      customers_mypage_path
   end
-    # protectedは呼び出された他のコントローラからも参照することができる
-  protected
+
+  # protectedは呼び出された他のコントローラからも参照することができる
+  private
 
   def configure_sign_up_params
     devise_parameter_sanitizer.permit(:sign_up, keys:[:name, :first_name_kana, :last_name_kana, :first_name, :last_name, :post_code, :phone_number, :address ])
   end
-# configure_permitted_parametersメソッドでは、devise_parameter_sanitizer.permitメソッドを使うことで
-# ユーザー登録(sign_up)の際に、ユーザー名等のデータ操作を許可している
+  # configure_permitted_parameters/configure_sign_up_paramsメソッドでは、devise_parameter_sanitizer.permitメソッドを使うことで
+  # ユーザー登録(sign_up)の際に、ユーザー名等のデータ操作を許可している
 
 end
