@@ -31,7 +31,6 @@ header{
 main{
   width: 100%;
   min-height: 100vh;
-  padding-bottom: 156px;
   position: relative;
 }
 
@@ -47,9 +46,10 @@ p{
   font-family: Georgia, serif;
 }
 
-footer{
-  background-color: #b3b3ff!important;
+
+footer {
+  position: sticky;
+  top: 100vh;
   width: 100%;
-  position: absolute;/*←絶対位置*/
-  bottom: 0; /*下に固定*/
+  background: #b3b3ff;
 }
