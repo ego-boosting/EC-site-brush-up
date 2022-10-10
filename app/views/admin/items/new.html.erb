@@ -1,12 +1,14 @@
   <div class="continer">
-  <%= form_with model: @item, url: admin_items_path do |f| %>
-  <%= f.file_field :image %>
-  <%= f.text_field :name %>
-  <%= f.text_field :introduction %>
-  <%= f.collection_select :genre_id, Genre.all, :id, :name %>
-  <%= f.text_field :without_tax %>
-  <%= f.radio_button :is_active, true %>
-  <%= f.radio_button :is_active, false %>
-  <%= f.submit %>
-  <% end %>
+    <div class="row">
+      <%= form_with model: @item, url: admin_items_path do |f| %>
+      <%= f.file_field :image %>
+      <%= f.text_field :name %>
+      <%= f.text_field :introduction %>
+      <%= f.collection_select :genre_id, Genre.all, :id, :name %>
+      <%= f.text_field :without_tax %>
+      <%= f.radio_button :is_active, true %>
+      <%= f.radio_button :is_active, false %>
+      <%= f.submit %>
+      <% end %>
+    </div>
   </div>
