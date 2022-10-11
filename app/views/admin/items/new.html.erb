@@ -1,14 +1,30 @@
   <div class="continer">
-    <div class="row">
+    <div class="d-flex justify-content-center">
       <%= form_with model: @item, url: admin_items_path do |f| %>
+      <div>
       <%= f.file_field :image %>
+      </div>
+      <div>
       <%= f.text_field :name %>
+      </div>
+      <div>
       <%= f.text_field :introduction %>
+      </div>
+      <div>
       <%= f.collection_select :genre_id, Genre.all, :id, :name %>
+      </div>
+      <div>
       <%= f.text_field :without_tax %>
+      </div>
+      <div>
       <%= f.radio_button :is_active, true %>
+      </div>
+      <div>
       <%= f.radio_button :is_active, false %>
+      </div>
+      <div>
       <%= f.submit %>
+      </div>
       <% end %>
     </div>
   </div>
